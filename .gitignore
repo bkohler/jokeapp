@@ -1,0 +1,50 @@
+# Binaries
+jokeapp
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Build artifacts
+*.out
+*.test
+*.log
+
+# IDE/editor files
+.vscode/
+.idea/
+*.swp
+*~
+
+# Dependency directories
+vendor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Config files with secrets (user-specific)
+.jokeapp.yaml
+
+# Test cache
+__pycache__/
+*.pyc
+
+# Go build cache
+*.cache
+
+# Environment files
+.env
+.env.*
+
+# Coverage reports
+coverage.*
+*.coverprofile
+
+# Archives
+*.zip
+*.tar.gz
+*.tgz
+*.tar
+*.rar
+*.7z
