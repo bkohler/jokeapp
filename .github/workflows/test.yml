@@ -1,4 +1,4 @@
-name: Go Test
+name: Go Test and Security
 
 on:
   push:
@@ -19,6 +19,9 @@ jobs:
       with:
         go-version: '1.21'
 
+    - name: Install gosec
+      run: go install github.com/securego/gosec/v2/cmd/gosec@latest
+
     - name: Run unit tests
       run: go test -v ./...
 
@@ -32,3 +35,6 @@ jobs:
         else
           echo "No API key set, skipping integration tests"
         fi
+
+    - name: Run gosec security scan
+      run: ~/go/bin/gosec ./...
